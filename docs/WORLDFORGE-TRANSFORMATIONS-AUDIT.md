@@ -314,6 +314,49 @@ Die vier lokalen Lindendorf-Speicher (`lindendorf-save-v1`, Kartenauflagen, Text
 
 ## 9. Roadmap
 
+### Umsetzungsstand (2026-09-25)
+
+Die Checkboxen werden nur nach Implementierung und passendem Test gesetzt. Die Arbeit folgt P0 bis P3 in der untenstehenden Reihenfolge.
+
+**P0: Entkopplung beweisen**
+
+- [x] Generischer Workspace-Kern und SchemaRegistry unter `src/core/`.
+- [x] Lorefreies World-/Quest-/Dialog-Fixture unter `tests/fixtures/`.
+- [x] In-Memory-Store und validierter, deterministischer JSON-Import-/Export-Roundtrip.
+- [x] Automatisierter Nachweis, dass der Produktions-Core ohne Fixtures baut (`tests/empty-core.test.mjs`).
+
+**P1: Lokale Produktfaehigkeit**
+
+- [x] SQLite-WASM-Adapter mit Entity-/Relations-/Tagtabellen, Transaktionen und Browserpersistenz.
+- [x] Entity-Revision-Snapshots sowie SQL-Suche nach Titel/Typ und Tagfilter-API.
+- [x] Gerichtete Graph- und Relationsindizes in den exportierten Berichten.
+- [x] Tagfilter, interaktive Relationsgraph-Ansicht und gerichtete Relationsanlage in der Studio-Oberflaeche.
+- [x] Entity-Editor an Commands/Queries angeschlossen; Archivieren bewahrt Entity und Relationen.
+- [x] Validierte JSON/YAML/Markdown/ZIP/SQLite-Format-Roundtrips und Exportpfade.
+- [x] Validierungsansicht mit Befunden und nicht-destruktiven, manuell zu bestaetigenden Handlungsvorschlaegen.
+
+**P2: Erweiterbarkeit**
+
+- [x] Plugin-Capabilities, Migrationen, Editoren und Exporter mit API-Versionvertrag.
+- [x] Registrierte Beispielplugins fuer Regelwerk, Timeline und Assets.
+- [x] Sicherer HTML-Preview-Renderer und Headless-API auf denselben Domain-Commands/Queries.
+
+**P3: Cloudfaehigkeit**
+
+- [x] HTTP-Sync-Port mit Workspace-Revisionen und Compare-and-Swap (`If-Match`/`If-None-Match`).
+- [x] Konfliktprotokoll erhaelt konkurrierende Entities/Relationen und blockiert Push bis zur expliziten Reviewfreigabe.
+- [x] Versionierter localStorage-Checkpoint fuer Sync-Baselines.
+- [x] UI fuer manuell gestartete Remote-Synchronisierung und explizite Konfliktfreigabe.
+- [ ] Konkreter Identity-Provider und Mehrbenutzerrechte.
+
+### Verifikationsstand
+
+- [x] `npm test` (20 Tests), `npm run typecheck` und `npm run build`.
+- [x] Deterministische Roundtrips fuer JSON, YAML, Markdown und ZIP; SQLite-Datenbank-Roundtrip.
+- [x] Produktionsbuild in einem isolierten Tree ohne `tests/` und Fixtures.
+- [ ] `npm run lint` (Script und ESLint-Konfiguration fehlen noch).
+- [ ] Desktop-/Mobile-Browser-Smoke mit Konsolenpruefung.
+
 ### P0: Entkopplung beweisen
 
 - Core-Paket mit leerem Workspace und SchemaRegistry.

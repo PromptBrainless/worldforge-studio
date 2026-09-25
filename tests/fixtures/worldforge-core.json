@@ -1,0 +1,86 @@
+{
+  "id": "8d4567b4-3b7b-487f-9d73-3c15a37c7998",
+  "name": "WorldForge Core Fixture",
+  "schemaVersion": 1,
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "updatedAt": "2025-01-01T00:00:00.000Z",
+  "entities": [
+    {
+      "id": "9c254a91-6b70-49b0-bdd3-09d1ec481ae1",
+      "workspaceId": "8d4567b4-3b7b-487f-9d73-3c15a37c7998",
+      "type": "world",
+      "schemaVersion": 1,
+      "title": "Aster Vale",
+      "aliases": [],
+      "canonState": "canon",
+      "sources": [{ "kind": "fixture", "uri": "fixture:world" }],
+      "history": [],
+      "data": { "description": "A setting used to test the generic workspace contract." },
+      "tags": ["fixture"],
+      "revision": 0,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "3dd75bd2-75e5-41b6-bad4-16b77d815513",
+      "workspaceId": "8d4567b4-3b7b-487f-9d73-3c15a37c7998",
+      "type": "quest",
+      "schemaVersion": 1,
+      "title": "Find the signal source",
+      "aliases": [],
+      "canonState": "unknown",
+      "sources": [{ "kind": "fixture", "uri": "fixture:quest" }],
+      "history": [],
+      "data": { "objectives": "Locate and document the origin of a recurring signal." },
+      "tags": ["fixture"],
+      "revision": 0,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "fad2d6d1-45e9-49e7-a7b4-04683768207f",
+      "workspaceId": "8d4567b4-3b7b-487f-9d73-3c15a37c7998",
+      "type": "dialogue",
+      "schemaVersion": 1,
+      "title": "Signal transcript",
+      "aliases": [],
+      "canonState": "unknown",
+      "sources": [{ "kind": "fixture", "uri": "fixture:dialogue" }],
+      "history": [],
+      "data": { "nodes": "A short exchange recorded during the investigation." },
+      "tags": ["fixture"],
+      "revision": 0,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z"
+    }
+  ],
+  "relations": [
+    {
+      "id": "84c384a4-4c5f-4ae6-922c-837631e0ff3b",
+      "workspaceId": "8d4567b4-3b7b-487f-9d73-3c15a37c7998",
+      "fromId": "3dd75bd2-75e5-41b6-bad4-16b77d815513",
+      "toId": "9c254a91-6b70-49b0-bdd3-09d1ec481ae1",
+      "kind": "belongs_to",
+      "weight": 1,
+      "confidence": 1,
+      "status": "confirmed",
+      "sources": [{ "kind": "fixture", "uri": "fixture:quest-world" }],
+      "time": {},
+      "data": {}
+    },
+    {
+      "id": "51f90078-5a1c-4a1f-a80b-13e2f5f2ab13",
+      "workspaceId": "8d4567b4-3b7b-487f-9d73-3c15a37c7998",
+      "fromId": "fad2d6d1-45e9-49e7-a7b4-04683768207f",
+      "toId": "3dd75bd2-75e5-41b6-bad4-16b77d815513",
+      "kind": "documents",
+      "weight": 1,
+      "confidence": 1,
+      "status": "confirmed",
+      "sources": [{ "kind": "fixture", "uri": "fixture:dialogue-quest" }],
+      "time": {},
+      "data": {}
+    }
+  ],
+  "mergeHistory": []
+}
