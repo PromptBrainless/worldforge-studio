@@ -1,0 +1,9 @@
+{
+  "name": "worldforge-studio",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {"dev":"vite --host 0.0.0.0 --port 8080","build":"tsc -b && vite build","typecheck":"tsc --noEmit","test":"node --test tests/**/*.test.mjs","preview":"vite preview --host 0.0.0.0"},
+  "dependencies": {"@vitejs/plugin-react":"latest","react":"latest","react-dom":"latest","vite":"latest","typescript":"latest","zod":"latest","lucide-react":"latest"},
+  "devDependencies": {"@types/react":"latest","@types/react-dom":"latest"}
+}
