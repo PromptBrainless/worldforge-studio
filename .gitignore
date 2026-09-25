@@ -3,3 +3,9 @@ dist
 *.local
 .DS_Store
 tsconfig.tsbuildinfo
+android/.gradle
+android/.idea
+android/build
+android/app/build
+android/local.properties
+android/captures

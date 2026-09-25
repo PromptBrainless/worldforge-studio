@@ -27,3 +27,19 @@ npm run dev
 npm test
 npm run typecheck
 ```
+
+## Android-APK
+
+Voraussetzungen: JDK 21 und Android SDK mit API 36. Android-Projekt synchronisieren und die installierbare Debug-APK bauen:
+
+```bash
+npm run android:apk
+```
+
+Die APK liegt danach unter `artifacts/WorldForge-Studio-debug.apk`. Zum Installieren auf einem verbundenen Android-Geraet:
+
+```bash
+adb install -r artifacts/WorldForge-Studio-debug.apk
+```
+
+Die Debug-APK ist fuer lokale Tests signiert; fuer eine Play-Store-Verteilung ist ein eigener Release-Schluessel erforderlich.

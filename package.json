@@ -8,9 +8,13 @@
     "build": "tsc -b && vite build",
     "typecheck": "tsc --noEmit",
     "test": "node --test tests/**/*.test.mjs",
-    "preview": "vite preview --host 0.0.0.0"
+    "preview": "vite preview --host 0.0.0.0",
+    "android:sync": "npm run build && cap sync android",
+    "android:apk": "npm run android:sync && cd android && ./gradlew assembleDebug && cd .. && mkdir -p artifacts && cp android/app/build/outputs/apk/debug/app-debug.apk artifacts/WorldForge-Studio-debug.apk"
   },
   "dependencies": {
+    "@capacitor/android": "^8.5.2",
+    "@capacitor/core": "^8.5.2",
     "@vitejs/plugin-react": "latest",
     "fflate": "^0.8.3",
     "lucide-react": "latest",
@@ -23,6 +27,7 @@
     "zod": "latest"
   },
   "devDependencies": {
+    "@capacitor/cli": "^8.5.2",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "@types/sql.js": "^1.4.11"
