@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 420" role="img" aria-label="WorldForge Studio — Offline-first world & campaign authoring">
+<defs>
+  <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#111827"/><stop offset="1" stop-color="#334155"/></linearGradient>
+</defs>
+<rect width="1400" height="420" rx="28" fill="url(#g)"/>
+<text x="70" y="95" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="52" font-weight="700">WorldForge Studio</text>
+<text x="70" y="145" fill="#cbd5e1" font-family="Inter,Arial,sans-serif" font-size="25">Offline-first world & campaign authoring</text>
+<g transform="translate(70,195)"><rect width="610" height="48" rx="12" fill="#ffffff" fill-opacity=".08"/><circle cx="24" cy="24" r="7" fill="#94a3b8"/><text x="46" y="32" fill="#e2e8f0" font-family="Inter,Arial,sans-serif" font-size="20">Worlds • regions • locations • characters</text></g><g transform="translate(720,195)"><rect width="610" height="48" rx="12" fill="#ffffff" fill-opacity=".08"/><circle cx="24" cy="24" r="7" fill="#94a3b8"/><text x="46" y="32" fill="#e2e8f0" font-family="Inter,Arial,sans-serif" font-size="20">Quests • dialogue • events • knowledge</text></g><g transform="translate(70,267)"><rect width="610" height="48" rx="12" fill="#ffffff" fill-opacity=".08"/><circle cx="24" cy="24" r="7" fill="#94a3b8"/><text x="46" y="32" fill="#e2e8f0" font-family="Inter,Arial,sans-serif" font-size="20">SQLite-WASM • versioned entities • relations</text></g><g transform="translate(720,267)"><rect width="610" height="48" rx="12" fill="#ffffff" fill-opacity=".08"/><circle cx="24" cy="24" r="7" fill="#94a3b8"/><text x="46" y="32" fill="#e2e8f0" font-family="Inter,Arial,sans-serif" font-size="20">Import/export • validation • Android APK</text></g>
+<text x="70" y="390" fill="#94a3b8" font-family="Inter,Arial,sans-serif" font-size="16">PromptBrainless • Repository identity • PB-GDS</text>
+</svg>

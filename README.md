@@ -1,3 +1,5 @@
+![WorldForge Studio](docs/REPOSITORY-COVER.svg)
+
 # WorldForge Studio
 
 Offline-first Studio für Welten, Kampagnen, Quests, Dialoge, Ereignisse, Wissen und Assets.
@@ -43,3 +45,10 @@ adb install -r artifacts/WorldForge-Studio-debug.apk
 ```
 
 Die Debug-APK ist fuer lokale Tests signiert; fuer eine Play-Store-Verteilung ist ein eigener Release-Schluessel erforderlich.
+
+
+---
+
+## Repository identity
+
+This repository uses a versioned visual cover in `docs/REPOSITORY-COVER.svg` to make its scope visible at a glance.
